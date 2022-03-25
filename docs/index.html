@@ -54,8 +54,11 @@
         }
       }
       .rd-img .subject {
-        filter: grayscale(100%);
         mix-blend-mode: color-burn;
+      }
+
+      .rd-img--gs .subject {
+        filter: grayscale(100%);
       }
 
       img,
@@ -83,8 +86,21 @@
           <section class="collection">
             <h2>Image</h2>
             <img class="subject" src="https://picsum.photos/id/250/800" />
-            <div class="rd-img rd-img">
+            <div class="rd-img rd-img--gs">
               <img class="subject" src="https://picsum.photos/id/250/800" />
+            </div>
+          </section>
+        </div>
+
+        <div class="document__item">
+          <section class="collection">
+            <h2>Rendering (color test)</h2>
+            <img class="subject" src="./bunny_2022-03-25 16-48-46.jpg" />
+            <div class="rd-img rd-img--gs">
+              <img class="subject" src="./bunny_2022-03-25 16-48-46.jpg" />
+            </div>
+            <div class="rd-img">
+              <img class="subject" src="./bunny_2022-03-25 16-48-46.jpg" />
             </div>
           </section>
         </div>
@@ -93,7 +109,7 @@
           <section class="collection">
             <h2>Gradient</h2>
             <img class="subject" src="./gradient.png" />
-            <div class="rd-img rd-img">
+            <div class="rd-img rd-img--gs">
               <img class="subject" src="./gradient.png" />
             </div>
           </section>
@@ -117,7 +133,7 @@
               />
             </video>
 
-            <div class="rd-img rd-img">
+            <div class="rd-img rd-img--gs">
               <video
                 class="subject"
                 muted
