@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="template--document">
+  <head>
+    <meta charset="utf-8" />
+    <title>Reaction-Diffusion Raster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Subline and short introduction" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.signalwerk.ch" />
+    <link
+      href="https://fonts.signalwerk.ch/css/latest/family=Open+Sans:ital,wght@0,300..800;1,300..800.css"
+      rel="stylesheet"
+    />
+    <!-- styles -->
+    <link
+      rel="stylesheet"
+      href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/72d62b5/styles/doc.critical.css"
+      media="all"
+    />
+    <link
+      rel="preload"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      href="https://rawcdn.githack.com/signalwerk/signalwerk.styles/72d62b5/styles/doc.rest.css"
+      media="all"
+    />
+
+    <style>
+      .rd-img {
+        position: relative;
+        width: 100%;
+      }
+      .rd-img {
+        /* height: 400px;
+          position: relative; */
+        filter: brightness(10) contrast(100);
+      }
+      .rd-img::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(./pattern_st_2022_3_22_17_51_18_200x200.png);
+        background-size: 200px 200px;
+        /* filter: brightness(1); */
+      }
+
+      @media (min-resolution: 2dppx) {
+        .rd-img::before {
+          background-image: url(./pattern_st_2022_3_22_17_51_18_400x400.png);
+        }
+      }
+      .rd-img .subject {
+        filter: grayscale(100%);
+        mix-blend-mode: color-burn;
+      }
+
+      img,
+      video {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <main>
+      <article class="document">
+        <header class="header">
+          <div class="header__inner">
+            <h1 class="header__title">Reaction-Diffusion Raster</h1>
+            <p class="header__subline">
+              Experiments in CSS for black/white rasterization
+            </p>
+            <p class="header__info">Stefan Huber · March 25, 2022</p>
+          </div>
+        </header>
+
+        <div class="document__item">
+          <section class="collection">
+            <h2>Image</h2>
+            <img class="subject" src="https://picsum.photos/id/250/800" />
+            <div class="rd-img rd-img">
+              <img class="subject" src="https://picsum.photos/id/250/800" />
+            </div>
+          </section>
+        </div>
+
+        <div class="document__item">
+          <section class="collection">
+            <h2>Gradient</h2>
+            <img class="subject" src="./gradient.png" />
+            <div class="rd-img rd-img">
+              <img class="subject" src="./gradient.png" />
+            </div>
+          </section>
+        </div>
+
+        <div class="document__item">
+          <section class="collection">
+            <h2>Video</h2>
+            <video
+              class="subject"
+              muted
+              loop
+              autoplay
+              oncanplay="this.muted=true"
+              poster="https://vjs.zencdn.net/v/oceans.png"
+            >
+              <source
+                src="https://vjs.zencdn.net/v/oceans.mp4"
+                type="video/mp4"
+              />
+            </video>
+
+            <div class="rd-img rd-img">
+              <video
+                class="subject"
+                muted
+                loop
+                autoplay
+                oncanplay="this.muted=true"
+                poster="https://vjs.zencdn.net/v/oceans.png"
+              >
+                <source
+                  src="https://vjs.zencdn.net/v/oceans.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </section>
+        </div>
+      </article>
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <!-- html:children:end -->
+    </main>
+  </body>
+</html>
